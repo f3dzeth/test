@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greetings in Different Languages</title>
+</head>
+<body>
+    <h1>Greetings in Different Languages</h1>
+
+    <p id="greeting">Hello, World!</p>
+
+    <select id="languageSelect">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+        <!-- Add more language options here -->
+    </select>
+
+    <button onclick="changeGreeting()">Say Hello</button>
+
+    <script>
+        function changeGreeting() {
+            var greeting = document.getElementById('greeting');
+            var languageSelect = document.getElementById('languageSelect');
+            var selectedLanguage = languageSelect.value;
+
+            if (selectedLanguage === "english") {
+                greeting.textContent = "Hello, World!";
+            } else if (selectedLanguage === "spanish") {
+                greeting.textContent = "¡Hola, Mundo!";
+            } else if (selectedLanguage === "french") {
+                greeting.textContent = "Bonjour, le Monde!";
+            }
+            // Add more language greetings here
+
+        }
+    </script>
+</body>
+</html>
